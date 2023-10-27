@@ -1,28 +1,86 @@
 import React from "react"
 
-function UserInformation() {
+function UserInformation({ handleHeadingInfoChange, heading }) {
+
     return (
         <>
             <h1>Enter Information Here</h1>
-            <div>
+            <form action="">
                 <h2>Heading Information</h2>
                 <div>
-                    <label htmlFor="name">Name:</label>
-                    <input type="text" />
+                    <label htmlFor="name">Name: </label>
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        value={heading.name}
+                        placeholder="John Doe"
+                        onChange={handleHeadingInfoChange} />
                 </div>
                 <div>
-                    <label htmlFor="email">Email:</label>
-                    <input type="text" />
+                    <label htmlFor="position">Position: </label>
+                    <input
+                        type="text"
+                        id="position"
+                        name="position"
+                        value={heading.position}
+                        placeholder="Software Engineer"
+                        onChange={handleHeadingInfoChange} />
                 </div>
                 <div>
-                    <label htmlFor="phone">Phone:</label>
-                    <input type="text" />
+                    <label htmlFor="email">Email: </label>
+                    <input
+                        type="text"
+                        id="email"
+                        name="email"
+                        value={heading.email}
+                        placeholder="johndoe@gmail.com"
+                        onChange={handleHeadingInfoChange} />
                 </div>
                 <div>
-                    <label htmlFor="location">Location:</label>
-                    <input type="text" />
+                    <label htmlFor="phone">Phone: </label>
+                    <input
+                        type="text"
+                        id="phone"
+                        name="phone"
+                        value={heading.phone}
+                        placeholder="(555)555-5555"
+                        onChange={handleHeadingInfoChange} />
                 </div>
-            </div>
+                <div>
+                    <label htmlFor="location">Location: </label>
+                    <input
+                        type="text"
+                        id="location"
+                        name="location"
+                        value={heading.location}
+                        placeholder="City Name"
+                        onChange={handleHeadingInfoChange} />
+                </div>
+                <div>
+                    <h4>Optional Fields</h4>
+                    <div>
+                        <label htmlFor="website">Website: </label>
+                        <input
+                            type="text"
+                            id="website"
+                            name="website"
+                            value={heading.website}
+                            placeholder="https://portfoliosite.com"
+                            onChange={handleHeadingInfoChange} />
+                    </div>
+                    <div>
+                        <label htmlFor="linkedin">LinkedIn: </label>
+                        <input
+                            type="text"
+                            id="linkedin"
+                            name="linkedin"
+                            value={heading.linkedin}
+                            onChange={handleHeadingInfoChange} />
+                    </div>
+                </div>
+                {/* <button onSubmit={handleHeadingInfoChange}>Submit</button> */}
+            </form>
         </>
     )
 }

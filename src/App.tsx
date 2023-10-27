@@ -1,24 +1,32 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import './App.css'
 import { UserInformation } from './components/UserInformation'
 import { UserResume } from './components/UserResume'
 
 function App() {
   const [heading, setHeading] = useState({
-    name: 'Jakob Shavinski',
-    email: 'shavinski.jakob@gmial.com',
-    phone: '(805)813-7395',
-    location: 'Los Angeles'
+    name: '',
+    position: '',
+    email: '',
+    phone: '',
+    location: '',
+    website: '',
+    linkedin: '',
   })
 
-  function handleHeadingChange() {
-    setHeading(heading)
+  function handleHeadingInfoChange(e: React.ChangeEvent<HTMLInputElement>) {
+    const { name, value } = e.target;
+
+    setHeading((prevData) => ({
+      ...prevData,
+      [name]: value
+    }));
   }
 
 
   return (
     <div className='app-main-container'>
-      <UserInformation />
+      <UserInformation handleHeadingInfoChange={handleHeadingInfoChange} heading={heading} />
       <UserResume heading={heading} />
     </div>
   )
