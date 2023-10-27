@@ -2,9 +2,10 @@ import React, { useState } from 'react'
 import './App.css'
 import { UserInformation } from './components/UserInformation'
 import { UserResume } from './components/UserResume'
+import { HeadingInfo } from './interfaces/HeadingInterface'
 
 function App() {
-  const [heading, setHeading] = useState({
+  const [heading, setHeading] = useState<HeadingInfo>({
     name: '',
     position: '',
     email: '',
