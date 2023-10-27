@@ -1,15 +1,27 @@
 import React from "react"
 
-function UserInformation({ heading }) {
+function UserInformation() {
     return (
         <>
             <h1>Enter Information Here</h1>
             <div>
                 <h2>Heading Information</h2>
-                <p>{heading.name}</p>
-                <p>{heading.email}</p>
-                <p>{heading.phone}</p>
-                <p>{heading.location}</p>
+                <div>
+                    <label htmlFor="name">Name:</label>
+                    <input type="text" />
+                </div>
+                <div>
+                    <label htmlFor="email">Email:</label>
+                    <input type="text" />
+                </div>
+                <div>
+                    <label htmlFor="phone">Phone:</label>
+                    <input type="text" />
+                </div>
+                <div>
+                    <label htmlFor="location">Location:</label>
+                    <input type="text" />
+                </div>
             </div>
         </>
     )

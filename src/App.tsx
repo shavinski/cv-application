@@ -5,18 +5,21 @@ import { UserResume } from './components/UserResume'
 
 function App() {
   const [heading, setHeading] = useState({
-    'name': 'Jakob Shavinski',
-    'email': 'shavinski.jakob@gmial.com',
-    'phone': '(805)813-7395',
-    'location': 'Los Angeles'
+    name: 'Jakob Shavinski',
+    email: 'shavinski.jakob@gmial.com',
+    phone: '(805)813-7395',
+    location: 'Los Angeles'
   })
 
+  function handleHeadingChange() {
+    setHeading(heading)
+  }
 
 
   return (
     <div className='app-main-container'>
-      <UserInformation heading={heading} />
-      <UserResume />
+      <UserInformation />
+      <UserResume heading={heading} />
     </div>
   )
 }
