@@ -1,0 +1,37 @@
+.resume-container {
+    background-color: white;
+    color: black;
+    min-width: 60%;
+    min-height: 800px;
+}
+
+.resume-heading {
+
+}
+
+.main-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-size: 16px;
+    margin-bottom: -30px;
+}
+
+.main-heading p {
+    font-size: large;
+    font-weight: bold;
+}
+
+.info-heading {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    font-size: 10px;
+}
+
+.info-heading a {
+    text-decoration: none;
+    color: black;
+    font-size: 10px;
+}

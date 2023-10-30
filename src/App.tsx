@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import './App.css'
 import { UserInformation } from './components/UserInformation'
 import { UserResume } from './components/UserResume'
-import { HeadingInfo } from './interfaces/HeadingInterface'
+import { HeadingInfo } from './interfaces/HeadingInfo'
 
 function App() {
   const [heading, setHeading] = useState<HeadingInfo>({
