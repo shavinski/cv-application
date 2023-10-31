@@ -10,8 +10,7 @@ function App() {
     position: '',
     email: '',
     phone: '',
-    location: '',
-    website: '',
+    github: '',
     linkedin: '',
   })
 

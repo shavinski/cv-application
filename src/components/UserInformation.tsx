@@ -48,24 +48,14 @@ function UserInformation({ handleHeadingInfoChange, heading }) {
                         onChange={handleHeadingInfoChange} />
                 </div>
                 <div>
-                    <label htmlFor="location">Location: </label>
-                    <input
-                        type="text"
-                        id="location"
-                        name="location"
-                        value={heading.location}
-                        placeholder="City Name"
-                        onChange={handleHeadingInfoChange} />
-                </div>
-                <div>
                     <h4>Optional Fields</h4>
                     <div>
-                        <label htmlFor="website">Website: </label>
+                        <label htmlFor="github">Github: </label>
                         <input
                             type="text"
-                            id="website"
-                            name="website"
-                            value={heading.website}
+                            id="github"
+                            name="github"
+                            value={heading.github}
                             placeholder="https://portfoliosite.com"
                             onChange={handleHeadingInfoChange} />
                     </div>

@@ -4,7 +4,6 @@ export interface HeadingInfo {
     position: string,
     email: string,
     phone: string,
-    location: string,
-    website: string,
+    github: string,
     linkedin: string
 }
