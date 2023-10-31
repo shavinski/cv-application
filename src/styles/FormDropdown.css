@@ -1,0 +1,11 @@
+.dropdown-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: grey;
+    gap: 10px;
+}
+
+.dropdown-container:hover {
+    cursor: pointer;
+}

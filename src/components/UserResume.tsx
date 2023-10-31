@@ -1,7 +1,12 @@
 import React from "react";
+import { HeadingInfo } from "../interfaces/UserInfoInterfaces";
 import "../styles/UserResume.css"
 
-function UserResume({ heading }) {
+interface UserHeadingProps {
+    heading: HeadingInfo
+}
+
+function UserResume({ heading }: UserHeadingProps) {
     return (
         <>
             <h1>User Resume Here</h1>
