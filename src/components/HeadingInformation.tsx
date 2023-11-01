@@ -1,7 +1,11 @@
 import React from "react";
-import { UserInformationProps } from "../interfaces/UserInfoInterfaces";
-
-
+// import { UserInformationProps } from "../interfaces/UserInfoInterfaces";
+import { HeadingInfo } from "../interfaces/UserInfoInterfaces";
+import { ChangeInfoHandler } from "../interfaces/FunctionInterfaces";
+interface UserInformationProps {
+    handleHeadingInfoChange: ChangeInfoHandler
+    heading: HeadingInfo
+}
 
 function HeadingInformation({ handleHeadingInfoChange, heading }: UserInformationProps) {
     return (
