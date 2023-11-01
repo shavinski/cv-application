@@ -1,13 +1,8 @@
 import React from "react";
-// import { UserInformationProps } from "../interfaces/UserInfoInterfaces";
-import { HeadingInfo } from "../interfaces/UserInfoInterfaces";
-import { ChangeInfoHandler } from "../interfaces/FunctionInterfaces";
-interface UserInformationProps {
-    handleHeadingInfoChange: ChangeInfoHandler
-    heading: HeadingInfo
-}
+import { HeadingInformationProps } from "../interfaces/UserInfoInterfaces";
 
-function HeadingInformation({ handleHeadingInfoChange, heading }: UserInformationProps) {
+
+function HeadingInformation({ handleHeadingInfoChange, heading }: HeadingInformationProps) {
     return (
         <>
             <form action="">

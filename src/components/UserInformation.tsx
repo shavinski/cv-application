@@ -3,11 +3,7 @@ import { HeadingInformation } from "./HeadingInformation"
 import { FormDropdown } from "./FormDropdown"
 import { HeadingInfo } from "../interfaces/UserInfoInterfaces";
 import { ChangeInfoHandler } from "../interfaces/FunctionInterfaces";
-
-interface UserInformationProps {
-    handleHeadingInfoChange: ChangeInfoHandler
-    heading: HeadingInfo
-}
+import { UserInformationProps } from "../interfaces/UserInfoInterfaces";
 
 function UserInformation({ handleHeadingInfoChange, heading }: UserInformationProps) {
 

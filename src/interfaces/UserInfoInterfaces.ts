@@ -1,5 +1,7 @@
 import { ChangeInfoHandler } from "./FunctionInterfaces";
 
+
+/******************* Interfaces for main state in App.tsx *****************/
 export interface HeadingInfo {
     name: string,
     position: string,
@@ -9,14 +11,16 @@ export interface HeadingInfo {
     linkedin: string
 }
 
-// export interface UserInformationProps {
-//     handleHeadingInfoChange: ChangeInfoHandler
-//     heading: HeadingInfo
-// }
 
-export interface FormDropdownGeneric<TInfo, THandleChange> {
-    ComponentForm: React.ComponentType<{ info: TInfo, handleInfoChange: THandleChange }>;
-    handleInfoChange: THandleChange;
-    info: TInfo;
-    title: string;
+/******************** Interfaces for different forms ********************/
+export interface HeadingInformationProps {
+    handleHeadingInfoChange: ChangeInfoHandler
+    heading: HeadingInfo
 }
+
+
+export interface UserInformationProps {
+    handleHeadingInfoChange: ChangeInfoHandler
+    heading: HeadingInfo
+}
+
