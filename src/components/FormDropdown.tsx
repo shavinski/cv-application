@@ -1,8 +1,6 @@
 import React, { ReactNode } from "react";
 import { useState } from "react";
 import '../styles/FormDropdown.css'
-import { HeadingInfo } from "../interfaces/UserInfoInterfaces";
-import { ChangeInfoHandler } from "../interfaces/FunctionInterfaces";
 
 interface FormDropdownProps {
     form: ReactNode

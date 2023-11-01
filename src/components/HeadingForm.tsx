@@ -1,8 +1,8 @@
 import React from "react";
-import { HeadingInformationProps } from "../interfaces/UserInfoInterfaces";
+import { HeadingFormProps } from "../interfaces/UserInfoInterfaces";
 
 
-function HeadingInformation({ handleHeadingInfoChange, heading }: HeadingInformationProps) {
+function HeadingForm({ handleHeadingInfoChange, heading }: HeadingFormProps) {
     return (
         <>
             <form action="">
@@ -75,4 +75,4 @@ function HeadingInformation({ handleHeadingInfoChange, heading }: HeadingInforma
     )
 }
 
-export { HeadingInformation }
+export { HeadingForm }

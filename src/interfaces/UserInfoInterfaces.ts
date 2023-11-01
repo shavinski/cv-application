@@ -1,4 +1,4 @@
-import { ChangeInfoHandler } from "./FunctionInterfaces";
+import { ChangeInfoHandler, ChangeSkillsHandler } from "./FunctionInterfaces";
 
 
 /******************* Interfaces for main state in App.tsx *****************/
@@ -11,16 +11,28 @@ export interface HeadingInfo {
     linkedin: string
 }
 
+export interface SkillsInfo {
+    'languages': string[],
+    'libraries': string[],
+    'frameworks/tools': string[]
+}
 
 /******************** Interfaces for different forms ********************/
-export interface HeadingInformationProps {
+export interface HeadingFormProps {
     handleHeadingInfoChange: ChangeInfoHandler
     heading: HeadingInfo
+}
+
+export interface SkillsFormProps {
+    handleSkillsInfoChange: ChangeSkillsHandler
+    skills: SkillsInfo
 }
 
 
 export interface UserInformationProps {
     handleHeadingInfoChange: ChangeInfoHandler
     heading: HeadingInfo
+    handleSkillsInfoChange: ChangeSkillsHandler
+    skills: SkillsInfo
 }
 

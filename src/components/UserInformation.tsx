@@ -1,20 +1,30 @@
 import React from "react"
-import { HeadingInformation } from "./HeadingInformation"
+import { HeadingForm } from "./HeadingForm"
+import { SkillsForm } from "./SkillsForm";
 import { FormDropdown } from "./FormDropdown"
-import { HeadingInfo } from "../interfaces/UserInfoInterfaces";
-import { ChangeInfoHandler } from "../interfaces/FunctionInterfaces";
 import { UserInformationProps } from "../interfaces/UserInfoInterfaces";
 
-function UserInformation({ handleHeadingInfoChange, heading }: UserInformationProps) {
+function UserInformation({
+    handleHeadingInfoChange,
+    heading,
+    handleSkillsInfoChange,
+    skills
+}: UserInformationProps) {
 
     return (
         <>
             <h1>Enter Information Here</h1>
             <FormDropdown
-                form={<HeadingInformation
+                form={<HeadingForm
                     handleHeadingInfoChange={handleHeadingInfoChange}
                     heading={heading} />}
                 title="Heading Information"
+            />
+            <FormDropdown
+                form={<SkillsForm
+                    handleSkillsInfoChange={handleSkillsInfoChange}
+                    skills={skills} />}
+                title="Skills Information"
             />
         </>
     )
