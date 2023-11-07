@@ -12,8 +12,6 @@ function SkillsForm({ handleSkillsInfoChange, skills }: SkillsFormProps) {
                         {skills.languages.map((language, index) => (
                             <li key={index}>
                                 {language}
-                                {/* <button onClick={() => handleEditSkill(index, 'languages')}>Edit</button> */}
-                                {/* <button onClick={() => handleRemoveSkill(index, 'languages')}>Remove</button> */}
                             </li>
                         ))}
                     </ul>
@@ -25,8 +23,6 @@ function SkillsForm({ handleSkillsInfoChange, skills }: SkillsFormProps) {
                         {skills.libraries.map((lib, index) => (
                             <li key={index}>
                                 {lib}
-                                {/* <button onClick={() => handleEditSkill(index, 'languages')}>Edit</button> */}
-                                {/* <button onClick={() => handleRemoveSkill(index, 'languages')}>Remove</button> */}
                             </li>
                         ))}
                     </ul>
@@ -38,8 +34,6 @@ function SkillsForm({ handleSkillsInfoChange, skills }: SkillsFormProps) {
                         {skills['frameworks/tools'].map((frameTool, index) => (
                             <li key={index}>
                                 {frameTool}
-                                {/* <button onClick={() => handleEditSkill(index, 'languages')}>Edit</button> */}
-                                {/* <button onClick={() => handleRemoveSkill(index, 'languages')}>Remove</button> */}
                             </li>
                         ))}
                     </ul>

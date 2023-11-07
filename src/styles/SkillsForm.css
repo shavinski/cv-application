@@ -1,5 +1,18 @@
 .skills-main-container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     gap: 30px
+}
+
+.skills-sub-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (min-width: 767px) {
+    .skills-main-container {
+        flex-direction: row;
+    }
 }
