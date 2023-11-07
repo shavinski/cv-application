@@ -11,6 +11,18 @@
     align-items: center;
 }
 
+.skills-sub-container ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skills-sub-container ul li {
+    text-align: left;
+    padding: 0;
+    margin: 0;
+}
+
 @media (min-width: 767px) {
     .skills-main-container {
         flex-direction: row;

@@ -38,7 +38,6 @@ function SkillsForm({ handleSkillsInfoChange, skills }: SkillsFormProps) {
                         ))}
                     </ul>
                 </div>
-
             </div>
         </>
     )
