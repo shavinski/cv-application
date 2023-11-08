@@ -15,9 +15,9 @@ function App() {
   })
 
   const [skills, setSkills] = useState<SkillsInfo>({
-    'languages': ['JavaScript', 'Python'],
-    'libraries': ['Bootstrap'],
-    'frameworks/tools': ['Django']
+    'Languages': ['JavaScript', 'Python'],
+    'Libraries': ['Bootstrap'],
+    'Frameworks/Tools': ['Django']
   })
 
   function handleHeadingInfoChange(e: React.ChangeEvent<HTMLInputElement>) {

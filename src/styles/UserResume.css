@@ -10,7 +10,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 5px;
+    gap: 2px;
     font-size: clamp(.5em, .8em, 1.6em);
     margin-bottom: -30px;
 }
@@ -24,9 +24,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 5px;
-    font-size: clamp(.5em, .7em, 1.5em);
     font-weight: bold;
+    gap: 5px;
+    font-size: clamp(.4em, .6em, 1em);
+    margin-top: 5px;
 }
 
 .info-heading a {

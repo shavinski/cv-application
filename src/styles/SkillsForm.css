@@ -43,3 +43,37 @@
         flex-direction: row;
     }
 }
+
+.modal, .overlay {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    position: fixed;
+}
+
+.overlay {
+    background-color: rgb(46, 46, 46);
+    opacity: 90%;
+}
+
+.modal-form-skills {
+    background-color: red;
+    position: absolute;
+    padding: 30px;
+    top: 40%;
+    left: auto;
+    right: auto;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.modal-form-skills select, input, button {
+    width: 150px;
+    padding: 5px;
+    align-self: center;
+}
