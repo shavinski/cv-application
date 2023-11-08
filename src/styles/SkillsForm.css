@@ -60,7 +60,7 @@
 }
 
 .modal-form-skills {
-    background-color: red;
+    background-color: slateblue;
     position: absolute;
     padding: 30px;
     top: 50%;
@@ -74,8 +74,22 @@
     gap: 10px;
 }
 
-.modal-form-skills select, input, button {
+.modal-form-skills select {
     width: 150px;
     padding: 5px;
     align-self: center;
+}
+
+.skill-input {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.skill-input input {
+    width: 100px;
+}
+
+.skill-input button {
+    width: 40px;
 }

@@ -3,10 +3,32 @@ import { SkillsFormProps } from "../interfaces/UserInfoInterfaces";
 import '../styles/SkillsForm.css'
 
 function SkillsForm({ handleSkillsInfoChange, skills }: SkillsFormProps) {
-    const [showModal, setShowModal] = useState(false);
+    const [showModal, setShowModal] = useState<Boolean>(false);
+    const [selectedCategory, setSelectedCategory] = useState<string>('Languages');
+    const [newlyAddedSkill, setNewlyAddedSkill] = useState<string>('');
+    const [newLanguages, setNewLanguages] = useState<string[]>([]);
 
     function displayModalForm() {
         setShowModal(!showModal)
+    }
+
+    function handleCategoryChange(event) {
+        setSelectedCategory(event.target.value)
+    }
+
+    function handleInputChange(event) {
+        setNewlyAddedSkill(event.target.value);
+    }
+
+    function handleAddingNewSkill(category, newSkill, event) {
+        event.preventDefault();
+
+        console.log(category, newSkill)
+        if (category === 'Languages') {
+            setNewLanguages((prev) => [...prev, newSkill]);
+        }
+
+        setNewlyAddedSkill('');
     }
 
     return (
@@ -49,19 +71,26 @@ function SkillsForm({ handleSkillsInfoChange, skills }: SkillsFormProps) {
 
                 {showModal && (
                     <div className="modal">
-                        <div onClick={() => displayModalForm()} className="overlay"></div>
+                        <div onClick={displayModalForm} className="overlay"></div>
                         <form className="modal-form-skills">
-                            <label htmlFor="">What category would you like to add to?</label>
-                            <select>
+                            <label htmlFor="category">What category would you like to add to?</label>
+                            <select id="category" name="category" onChange={handleCategoryChange}>
                                 {Object.keys(skills).map((cat) => (
                                     <option value={cat} key={cat}>
                                         {cat}
                                     </option>
                                 ))}
                             </select>
-                            <label htmlFor="">Add desired skills here (make sure to add one at a time)</label>
-                            <input></input>
-                            <button>Add</button>
+                            <label htmlFor="new-skills">Add desired skills here (make sure to separate words with commas ex: Nice, Skill)</label>
+                            <div className="skill-input">
+                                <input id="new-skills" name="new-skills" onChange={handleInputChange} value={newlyAddedSkill}></input>
+                                <button
+                                    type="submit"
+                                    onClick={(event) => handleAddingNewSkill(selectedCategory, newlyAddedSkill, event)}
+                                    onKeyDown={(event) => handleAddingNewSkill(selectedCategory, newlyAddedSkill, event)}>
+                                    +
+                                </button>
+                            </div>
                         </form>
                     </div>
                 )}
