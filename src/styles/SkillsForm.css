@@ -9,9 +9,8 @@
 .skills-main-container button {
     border: none;
     outline: none;
-    width: 120px;
-    padding: 6px;
     border-radius: 10px;
+    padding: 3px;
 }
 
 .skills-sub-container {
@@ -60,21 +59,34 @@
 }
 
 .modal-form-skills {
-    background-color: slateblue;
+    display: flex;
+    flex-direction: column;
     position: absolute;
-    padding: 30px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    background-color: slateblue;
     padding: 30px;
     min-width: 250px;
     max-width: 350px;
-    display: flex;
-    flex-direction: column;
     gap: 10px;
+    transform: translate(-50%, -50%);
+    border-radius: 5%;
+    top: 50%;
+    left: 50%;
 }
 
-.modal-form-skills select {
+.modal-close-btn {
+    width: 30px;
+    top: 3%;
+    left: 88%;
+    position: absolute;
+    text-align: center;
+}
+
+.modal-close-btn:hover {
+    cursor: pointer;
+    background-color: rgb(223, 7, 7);
+}
+
+.modal-form-skills select, input {
     width: 150px;
     padding: 5px;
     align-self: center;
@@ -86,9 +98,6 @@
     gap: 5px;
 }
 
-.skill-input input {
-    width: 100px;
-}
 
 .skill-input button {
     width: 40px;
