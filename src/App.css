@@ -17,3 +17,8 @@ body {
   align-items: center;
   gap: 25px;
 }
+
+button {
+  outline: none;
+  border: none;
+}

@@ -6,11 +6,12 @@
     gap: 30px
 }
 
-.skills-main-container button {
-    border: none;
-    outline: none;
+.skills-main-container button{
     border-radius: 10px;
-    padding: 5px;
+}
+
+.modal-open-btn {
+    padding: 6px;
 }
 
 .skills-sub-container {
@@ -43,7 +44,8 @@
     }
 }
 
-.modal, .overlay {
+.modal,
+.overlay {
     width: 100vw;
     height: 100vh;
     top: 0;
@@ -63,7 +65,7 @@
     flex-direction: column;
     position: absolute;
     background-color: slateblue;
-    padding: 30px;
+    padding: 45px;
     min-width: 250px;
     max-width: 350px;
     gap: 10px;
@@ -74,9 +76,9 @@
 }
 
 .modal-close-btn {
-    width: 30px;
-    top: 3%;
-    left: 88%;
+    max-width: 35px;
+    top: 5%;
+    left: 90%;
     position: absolute;
     text-align: center;
 }
@@ -86,7 +88,8 @@
     background-color: rgb(223, 7, 7);
 }
 
-.modal-form-skills select, input {
+.modal-form-skills select,
+input {
     width: 150px;
     padding: 5px;
     align-self: center;
@@ -98,7 +101,6 @@
     gap: 5px;
 }
 
-
 .skill-input button {
-    width: 40px;
+    width: 35px;
 }
