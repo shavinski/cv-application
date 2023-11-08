@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { ChangeEvent, FormEvent, useState } from "react";
 import { SkillsFormProps } from "../interfaces/UserInfoInterfaces";
 import '../styles/SkillsForm.css'
 
@@ -12,15 +12,15 @@ function SkillsForm({ handleSkillsInfoChange, skills }: SkillsFormProps) {
         setShowModal(!showModal)
     }
 
-    function handleCategoryChange(event) {
+    function handleCategoryChange(event: ChangeEvent<HTMLSelectElement>) {
         setSelectedCategory(event.target.value)
     }
 
-    function handleInputChange(event) {
+    function handleInputChange(event: ChangeEvent<HTMLInputElement>) {
         setNewlyAddedSkill(event.target.value);
     }
 
-    function handleAddingNewSkill(category, newSkill, event) {
+    function handleAddingNewSkill(category: string, newSkill: string, event: FormEvent) {
         event.preventDefault();
 
         console.log(category, newSkill)
@@ -86,7 +86,7 @@ function SkillsForm({ handleSkillsInfoChange, skills }: SkillsFormProps) {
                                     </option>
                                 ))}
                             </select>
-                            <label htmlFor="new-skills">Add desired skills here (make sure to separate words with commas ex: Nice, Skill)</label>
+                            <label htmlFor="new-skills">Add desired skills here (make sure to separate words with commas ex: CSS, HTML)</label>
                             <div className="skill-input">
                                 <input id="new-skills" name="new-skills" onChange={handleInputChange} value={newlyAddedSkill}></input>
                                 <button

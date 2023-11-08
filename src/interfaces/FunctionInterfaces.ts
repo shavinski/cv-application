@@ -5,5 +5,5 @@ export interface ChangeInfoHandler {
 }
 
 export interface ChangeSkillsHandler {
-    (skillsCategory: string, newSkill: string): void;
+    (skillsCategory: string, newSkill: string[]): void;
 }
