@@ -36,7 +36,7 @@ function SkillsForm({ handleSkillsInfoChange, skills }: SkillsFormProps) {
         }
 
         const skillsList = createArrayForSkills(newSkills);
-        
+
         handleSkillsInfoChange(category, skillsList)
         setNewlyAddedSkill('');
         setShowModal(!showModal)
@@ -48,6 +48,9 @@ function SkillsForm({ handleSkillsInfoChange, skills }: SkillsFormProps) {
                 <div className="skills-sub-container">
                     <div className="skills-list-container">
                         <h3>Languages</h3>
+                        {skills.Languages.length === 0 &&
+                            <small>You currently have 0 skills in languages. Add some!</small>
+                        }
                         <ul>
                             {skills.Languages.map((language, index) => (
                                 <li key={index}>
@@ -58,6 +61,9 @@ function SkillsForm({ handleSkillsInfoChange, skills }: SkillsFormProps) {
                     </div>
                     <div className="skills-list-container">
                         <h3>Libraries</h3>
+                        {skills.Libraries.length === 0 &&
+                            <small>You currently have 0 skills in libraries. Add some!</small>
+                        }
                         <ul>
                             {skills.Libraries.map((lib, index) => (
                                 <li key={index}>
@@ -68,6 +74,9 @@ function SkillsForm({ handleSkillsInfoChange, skills }: SkillsFormProps) {
                     </div>
                     <div className="skills-list-container">
                         <h3>Frameworks/Tools</h3>
+                        {skills['Frameworks/Tools'].length === 0 &&
+                            <small>You currently have 0 skills in frameworks/tools. Add some!</small>
+                        }
                         <ul>
                             {skills['Frameworks/Tools'].map((frameTool, index) => (
                                 <li key={index}>

@@ -26,14 +26,18 @@
     align-items: center;
 }
 
+.skills-list-container {
+    width: 15vw;
+}
+
 .skills-list-container ul {
     list-style: none;
+    text-align: center;
     padding: 0;
     margin: 0;
 }
 
 .skills-list-container ul li {
-    text-align: left;
     padding: 0;
     margin: 0;
 }
@@ -41,6 +45,7 @@
 @media (min-width: 767px) {
     .skills-sub-container {
         flex-direction: row;
+        
     }
 }
 
