@@ -1,5 +1,6 @@
 import React, { ChangeEvent, FormEvent, useState } from "react";
 import { SkillsFormProps } from "../interfaces/UserInfoInterfaces";
+import { createArrayForSkills } from "../utils/skillsFormUtils";
 import '../styles/SkillsForm.css'
 
 function SkillsForm({ handleSkillsInfoChange, skills }: SkillsFormProps) {
@@ -22,18 +23,6 @@ function SkillsForm({ handleSkillsInfoChange, skills }: SkillsFormProps) {
 
     function handleAddingNewSkill(category: string, newSkills: string, event: FormEvent) {
         event.preventDefault();
-
-        function createArrayForSkills(newSkills: string) {
-            const newSkillsList = newSkills.split(', ');
-            const trimmedSkillsList = []
-
-            for (let skill of newSkillsList) {
-                const trimmedSkill = skill.trim();
-                trimmedSkillsList.push(trimmedSkill);
-            }
-
-            return trimmedSkillsList;
-        }
 
         const skillsList = createArrayForSkills(newSkills);
 
