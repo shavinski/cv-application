@@ -12,9 +12,7 @@ export interface HeadingInfo {
 }
 
 export interface SkillsInfo {
-    'Languages': string[],
-    'Libraries': string[],
-    'Frameworks/Tools': string[]
+    [key: string]: string[];
 }
 
 /******************** Interfaces for different forms ********************/

@@ -32,7 +32,7 @@ function App() {
   function handleSkillsInfoChange(skillCategory: string, newSkills: string[]) {
     setSkills((prevData) => ({
       ...prevData,
-      [skillCategory]: [...newSkills]
+      [skillCategory]: [...prevData[skillCategory], ...newSkills]
     }));
     console.log(`adding ${newSkills} to ${skillCategory}`)
   }
