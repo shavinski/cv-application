@@ -6,7 +6,7 @@
     gap: 30px
 }
 
-.skills-main-container button{
+.skills-main-container button {
     border-radius: 10px;
 }
 
@@ -27,7 +27,7 @@
 }
 
 .skills-list-container {
-    width: 15vw;
+    width: 50vw;
 }
 
 .skills-list-container ul {
@@ -45,7 +45,10 @@
 @media (min-width: 767px) {
     .skills-sub-container {
         flex-direction: row;
-        
+    }
+
+    .skills-list-container {
+        width: 15vw;
     }
 }
 
@@ -81,16 +84,19 @@
 }
 
 .modal-close-btn {
-    max-width: 35px;
-    top: 5%;
-    left: 90%;
+    color: rgb(255, 255, 255);
+    padding: 0px;
+    font-size: 0px;
+    top: -5px;
+    left: 97%;
     position: absolute;
     text-align: center;
 }
 
 .modal-close-btn:hover {
     cursor: pointer;
-    background-color: rgb(223, 7, 7);
+    background-color: rgb(207, 4, 4);
+    transform: rotate(99deg);
 }
 
 .modal-form-skills select,
@@ -107,5 +113,12 @@ input {
 }
 
 .skill-input button {
+    color: black;
+    background-color: rgb(219, 219, 219);
     width: 35px;
+}
+
+.skill-input button:hover {
+    cursor: pointer;
+
 }
