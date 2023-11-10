@@ -2,6 +2,7 @@ import { ChangeEvent, FormEvent, useState } from "react";
 import { SkillsFormProps } from "../interfaces/UserInfoInterfaces";
 import { createArrayForSkills } from "../utils/skillsFormUtils";
 import '../styles/SkillsForm.css'
+import { CategoryForm } from "./CategoryForm";
 
 function SkillsForm({ handleSkillsInfoChange, skills }: SkillsFormProps) {
     const [showModal, setShowModal] = useState<Boolean>(false);
@@ -37,10 +38,7 @@ function SkillsForm({ handleSkillsInfoChange, skills }: SkillsFormProps) {
                     <div className="skills-sub-container">
                         <div className="skills-list-container">
                             <h3>Languages</h3>
-                            <form className="add-skill-form" action="">
-                                <input id="languages" name="languages"></input>
-                                <button>+</button>
-                            </form>
+                            <CategoryForm category={'Languages'}/>
 
                             {skills.Languages.length === 0 &&
                                 <small>You currently have 0 skills in languages. Add some!</small>
