@@ -3,6 +3,8 @@ import { HeadingForm } from "./HeadingForm"
 import { SkillsForm } from "./SkillsForm";
 import { FormDropdown } from "./FormDropdown"
 import { UserInformationProps } from "../interfaces/UserInfoInterfaces";
+import "../styles/UserInformation.css"
+
 
 function UserInformation({
     handleHeadingInfoChange,
@@ -13,19 +15,21 @@ function UserInformation({
 
     return (
         <>
-            <h1>Enter Information Here</h1>
-            <FormDropdown
-                form={<HeadingForm
-                    handleHeadingInfoChange={handleHeadingInfoChange}
-                    heading={heading} />}
-                title="Heading Information"
-            />
-            <FormDropdown
-                form={<SkillsForm
-                    handleSkillsInfoChange={handleSkillsInfoChange}
-                    skills={skills} />}
-                title="Skills Information"
-            />
+            <div className="main-userinfo-container">
+                <h2>Your Info Here</h2>
+                <FormDropdown
+                    form={<HeadingForm
+                        handleHeadingInfoChange={handleHeadingInfoChange}
+                        heading={heading} />}
+                    title="Heading Information"
+                />
+                <FormDropdown
+                    form={<SkillsForm
+                        handleSkillsInfoChange={handleSkillsInfoChange}
+                        skills={skills} />}
+                    title="Skills Information"
+                />
+            </div>
         </>
     )
 }

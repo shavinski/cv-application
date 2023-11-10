@@ -1,9 +1,12 @@
 .dropdown-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     background-color: grey;
-    gap: 10px;
+    border: 1px solid black;
+    width: 322px;
+    font-size: 28px;
+    padding: 5px;
 }
 
 .dropdown-container:hover {

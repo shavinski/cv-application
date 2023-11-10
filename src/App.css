@@ -15,10 +15,25 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 25px;
 }
 
 button {
   outline: none;
   border: none;
+}
+
+.form-overlay {
+  background-color: rgb(48, 48, 48);
+  border: 3px rgb(60, 60, 60) solid;
+  width: 326px;
+  padding-bottom: 30px;
+}
+
+
+@media (min-width: 991px) {
+  .app-main-container {
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+  }
 }

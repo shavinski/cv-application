@@ -44,7 +44,7 @@
 
 @media (min-width: 767px) {
     .skills-sub-container {
-        flex-direction: row;
+        /* flex-direction: row; */
     }
 
     .skills-list-container {

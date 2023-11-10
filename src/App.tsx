@@ -40,12 +40,12 @@ function App() {
 
   return (
     <div className='app-main-container'>
-      <UserInformation
-        handleHeadingInfoChange={handleHeadingInfoChange}
-        heading={heading}
-        handleSkillsInfoChange={handleSkillsInfoChange}
-        skills={skills} />
-      <UserResume heading={heading} />
+        <UserInformation
+          handleHeadingInfoChange={handleHeadingInfoChange}
+          heading={heading}
+          handleSkillsInfoChange={handleSkillsInfoChange}
+          skills={skills} />
+        <UserResume heading={heading} />
     </div>
   )
 }
