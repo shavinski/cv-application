@@ -98,6 +98,7 @@
     background-color: rgb(207, 4, 4);
     transform: rotate(99deg);
 }
+
 /* 
 .modal-form-skills select,
 input {
@@ -120,5 +121,22 @@ input {
 
 .skill-input button:hover {
     cursor: pointer;
+}
 
+
+.add-skill-form {
+    display: flex;
+}
+
+.add-skill-form button {
+    width: 25px;
+    border-radius:0 7px 7px 0;
+    background-color: white;
+    color: black;
+}
+
+.add-skill-form input {
+    border: none;
+    background-color: rgb(32, 32, 32);
+    padding: 5px;
 }

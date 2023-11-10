@@ -37,6 +37,11 @@ function SkillsForm({ handleSkillsInfoChange, skills }: SkillsFormProps) {
                     <div className="skills-sub-container">
                         <div className="skills-list-container">
                             <h3>Languages</h3>
+                            <form className="add-skill-form" action="">
+                                <input id="languages" name="languages"></input>
+                                <button>+</button>
+                            </form>
+
                             {skills.Languages.length === 0 &&
                                 <small>You currently have 0 skills in languages. Add some!</small>
                             }
@@ -47,6 +52,7 @@ function SkillsForm({ handleSkillsInfoChange, skills }: SkillsFormProps) {
                                     </li>
                                 ))}
                             </ul>
+
                         </div>
                         <div className="skills-list-container">
                             <h3>Libraries</h3>
