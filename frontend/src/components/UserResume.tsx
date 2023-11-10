@@ -18,8 +18,8 @@ function UserResume({ heading, skills }: UserHeadingProps) {
                             {heading.position && <h2>| {heading.position}</h2>}
                         </div>
                         <div className="info-heading">
-                            {heading.email && <p>{heading.email}</p>}
-                            {heading.phone && <p>| {heading.phone}</p>}
+                            {heading.phone && <p>{heading.phone}</p>}
+                            {heading.email && <p>| {heading.email}</p>}
                             {heading.github && <a href={heading.github} target="_blank" rel="noopener noreferrer">| Github</a>}
                             {heading.linkedin && <a href={heading.linkedin} target="_blank" rel="noopener noreferrer">| LinkedIn</a>}
                         </div>

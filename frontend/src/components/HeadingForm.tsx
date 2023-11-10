@@ -36,19 +36,6 @@ function HeadingForm({ handleHeadingInfoChange, heading }: HeadingFormProps) {
                     </div>
                     <div className="form-input-group">
                         <div>
-                            <label htmlFor="email">
-                                <small>Email</small>
-                            </label>
-                            <input
-                                type="text"
-                                id="email"
-                                name="email"
-                                value={heading.email}
-                                placeholder="johndoe@gmail.com"
-                                onChange={handleHeadingInfoChange} />
-                        </div>
-
-                        <div>
                             <label htmlFor="phone">
                                 <small>Phone</small>
                             </label>
@@ -58,6 +45,19 @@ function HeadingForm({ handleHeadingInfoChange, heading }: HeadingFormProps) {
                                 name="phone"
                                 value={heading.phone}
                                 placeholder="(555)555-5555"
+                                onChange={handleHeadingInfoChange} />
+                        </div>
+
+                        <div>
+                            <label htmlFor="email">
+                                <small>Email</small>
+                            </label>
+                            <input
+                                type="text"
+                                id="email"
+                                name="email"
+                                value={heading.email}
+                                placeholder="johndoe@gmail.com"
                                 onChange={handleHeadingInfoChange} />
                         </div>
                     </div>
