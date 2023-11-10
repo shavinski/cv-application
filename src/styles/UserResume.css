@@ -43,6 +43,13 @@
     text-decoration: none;
 }
 
+.resume-skills-line {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 25px;
+    max-height: 21px;
+}
+
 @media (min-width: 767px) {
     body {
         background-color: blue;

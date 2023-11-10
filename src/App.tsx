@@ -6,18 +6,18 @@ import { HeadingInfo, SkillsInfo } from './interfaces/UserInfoInterfaces'
 
 function App() {
   const [heading, setHeading] = useState<HeadingInfo>({
-    name: '',
-    position: '',
-    email: '',
-    phone: '',
-    github: '',
-    linkedin: '',
+    name: 'Jakob Shavinski',
+    position: 'Software Engineer',
+    email: 'shavinski@gmail.com',
+    phone: '(805)813-7395',
+    github: 'github.com',
+    linkedin: 'linkedin.com',
   })
 
   const [skills, setSkills] = useState<SkillsInfo>({
-    'Languages': [],
-    'Libraries': [],
-    'Frameworks/Tools': []
+    'Languages': ['javascript', 'python'],
+    'Libraries': ['bootstrap', 'jquery', 'react'],
+    'Frameworks/Tools': ['Node.js', 'express.js']
   })
 
   function handleHeadingInfoChange(e: React.ChangeEvent<HTMLInputElement>) {
@@ -45,7 +45,7 @@ function App() {
           heading={heading}
           handleSkillsInfoChange={handleSkillsInfoChange}
           skills={skills} />
-        <UserResume heading={heading} />
+        <UserResume heading={heading} skills={skills}/>
     </div>
   )
 }
