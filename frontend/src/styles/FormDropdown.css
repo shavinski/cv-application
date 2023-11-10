@@ -1,0 +1,14 @@
+.dropdown-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: grey;
+    border: 1px solid black;
+    width: 322px;
+    font-size: 28px;
+    padding: 5px;
+}
+
+.dropdown-container:hover {
+    cursor: pointer;
+}

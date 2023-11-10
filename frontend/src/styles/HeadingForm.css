@@ -1,0 +1,17 @@
+.form-input-group {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 4px;
+}
+
+.form-input-group div{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.form-input-group input{
+    padding: 5px;
+    width: 130px;
+}
