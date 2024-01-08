@@ -26,11 +26,11 @@ function App() {
   }
 
   function handleSkillsInfoChange(newSkill: string) {
-    setSkills((prevData) => ({
+    setSkills((prevData) => ([
       ...prevData,
       newSkill
-    }));
-    console.log(`adding ${newSkill}}`)
+    ]));
+    console.log(`adding ${newSkill}`)
   }
 
 
