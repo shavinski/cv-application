@@ -1,131 +1,16 @@
 .skills-main-container {
+    padding: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 30px
 }
-
-.skills-main-container button {
-    border-radius: 10px;
-}
-
-.modal-open-btn {
-    padding: 6px;
-}
-
-.skills-sub-container {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-
-.skills-list-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.skills-list-container {
-    width: 50vw;
-}
-
-.skills-list-container ul {
-    list-style: none;
-    text-align: center;
-    padding: 0;
-    margin: 0;
-}
-
-.skills-list-container ul li {
-    padding: 0;
-    margin: 0;
-}
-
-@media (min-width: 767px) {
-    .skills-sub-container {
-        /* flex-direction: row; */
-    }
-
-    .skills-list-container {
-        width: 15vw;
-    }
-}
-
-.modal,
-.overlay {
-    width: 100vw;
-    height: 100vh;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    position: fixed;
-}
-
-.overlay {
-    background-color: rgb(46, 46, 46);
-    opacity: 90%;
-}
-
-.modal-form-skills {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    background-color: slateblue;
-    padding: 45px;
-    min-width: 250px;
-    max-width: 350px;
-    gap: 10px;
-    transform: translate(-50%, -50%);
-    border-radius: 5%;
-    top: 50%;
-    left: 50%;
-}
-
-.modal-close-btn {
-    color: rgb(255, 255, 255);
-    padding: 0px;
-    font-size: 0px;
-    top: -5px;
-    left: 97%;
-    position: absolute;
-    text-align: center;
-}
-
-.modal-close-btn:hover {
-    cursor: pointer;
-    background-color: rgb(207, 4, 4);
-    transform: rotate(99deg);
-}
-
-/* 
-.modal-form-skills select,
-input {
-    width: 150px;
-    padding: 5px;
-    align-self: center;
-} */
-
-.skill-input {
-    display: flex;
-    justify-content: center;
-    gap: 5px;
-}
-
-.skill-input button {
-    color: black;
-    background-color: rgb(219, 219, 219);
-    width: 35px;
-}
-
-.skill-input button:hover {
-    cursor: pointer;
-}
-
 
 .add-skill-form {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:flex-start
 }
 
 .add-skill-form button {
@@ -133,10 +18,23 @@ input {
     border-radius:0 7px 7px 0;
     background-color: white;
     color: black;
+    padding: 5px;
+}
+
+.add-skill-form button:hover {
+    cursor: pointer;
+    background-color: rgb(235, 235, 235);
 }
 
 .add-skill-form input {
     border: none;
     background-color: rgb(32, 32, 32);
     padding: 5px;
+    margin-left: 2px;
+    border-radius: 7px 0 0 7px;
+}
+
+.add-skill-form input:focus {
+    border: none;
+    outline: none;
 }

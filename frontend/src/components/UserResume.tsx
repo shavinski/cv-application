@@ -1,9 +1,9 @@
-import { HeadingInfo, SkillsInfo } from "../interfaces/UserInfoInterfaces";
+import { HeadingInfo } from "../interfaces/UserInfoInterfaces";
 import "../styles/UserResume.css"
 
 interface UserHeadingProps {
     heading: HeadingInfo
-    skills: SkillsInfo
+    skills: string[]
 }
 
 function UserResume({ heading, skills }: UserHeadingProps) {
@@ -25,27 +25,11 @@ function UserResume({ heading, skills }: UserHeadingProps) {
                         </div>
                     </section>
                     <section className="resume-skills-container">
-                        {skills.Languages.length !== 0 &&
+                        {skills.length !== 0 &&
                             <div className="resume-skills-line">
                                 <p><b>Languages:</b></p>
-                                {skills.Languages.map((lang) => (
-                                    <p key={lang}>{lang}</p>
-                                ))}
-                            </div>
-                        }
-                        {skills.Libraries.length !== 0 &&
-                            <div className="resume-skills-line">
-                                <p><b>Libraries:</b></p>
-                                {skills.Libraries.map((lang) => (
-                                    <p key={lang}>{lang}</p>
-                                ))}
-                            </div>
-                        }
-                        {skills['Frameworks/Tools'].length !== 0 &&
-                            <div className="resume-skills-line">
-                                <p><b>Frameworks/Tools:</b></p>
-                                {skills['Frameworks/Tools'].map((lang) => (
-                                    <p key={lang}>{lang}</p>
+                                {skills.map((skill) => (
+                                    <p key={skill}>{skill}</p>
                                 ))}
                             </div>
                         }

@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import './App.css'
 import { UserInformation } from './components/UserInformation'
 import { UserResume } from './components/UserResume'
-import { HeadingInfo, SkillsInfo } from './interfaces/UserInfoInterfaces'
+import { HeadingInfo } from './interfaces/UserInfoInterfaces'
 
 function App() {
   const [heading, setHeading] = useState<HeadingInfo>({
@@ -14,11 +14,7 @@ function App() {
     linkedin: 'linkedin.com',
   })
 
-  const [skills, setSkills] = useState<SkillsInfo>({
-    'Languages': ['javascript', 'python'],
-    'Libraries': ['bootstrap', 'jquery', 'react'],
-    'Frameworks/Tools': ['Node.js', 'express.js']
-  })
+  const [skills, setSkills] = useState<string[]>(['Javascript', 'SQL'])
 
   function handleHeadingInfoChange(e: React.ChangeEvent<HTMLInputElement>) {
     const { name, value } = e.target;
@@ -29,23 +25,23 @@ function App() {
     }));
   }
 
-  function handleSkillsInfoChange(skillCategory: string, newSkills: string[]) {
+  function handleSkillsInfoChange(newSkill: string) {
     setSkills((prevData) => ({
       ...prevData,
-      [skillCategory]: [...prevData[skillCategory], ...newSkills]
+      newSkill
     }));
-    console.log(`adding ${newSkills} to ${skillCategory}`)
+    console.log(`adding ${newSkill}}`)
   }
 
 
   return (
     <div className='app-main-container'>
-        <UserInformation
-          handleHeadingInfoChange={handleHeadingInfoChange}
-          heading={heading}
-          handleSkillsInfoChange={handleSkillsInfoChange}
-          skills={skills} />
-        <UserResume heading={heading} skills={skills}/>
+      <UserInformation
+        handleHeadingInfoChange={handleHeadingInfoChange}
+        heading={heading}
+        handleSkillsInfoChange={handleSkillsInfoChange}
+        skills={skills} />
+      <UserResume heading={heading} skills={skills} />
     </div>
   )
 }

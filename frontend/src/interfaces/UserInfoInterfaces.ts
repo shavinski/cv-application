@@ -11,10 +11,6 @@ export interface HeadingInfo {
     linkedin: string
 }
 
-export interface SkillsInfo {
-    [key: string]: string[];
-}
-
 /******************** Interfaces for different forms ********************/
 export interface HeadingFormProps {
     handleHeadingInfoChange: ChangeInfoHandler
@@ -23,7 +19,7 @@ export interface HeadingFormProps {
 
 export interface SkillsFormProps {
     handleSkillsInfoChange: ChangeSkillsHandler
-    skills: SkillsInfo
+    skills: string[]
 }
 
 
@@ -31,6 +27,6 @@ export interface UserInformationProps {
     handleHeadingInfoChange: ChangeInfoHandler
     heading: HeadingInfo
     handleSkillsInfoChange: ChangeSkillsHandler
-    skills: SkillsInfo
+    skills: string[]
 }
 
